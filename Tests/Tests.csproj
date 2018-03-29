@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsumingData.cs" />
+    <Compile Include="Linq.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +62,10 @@
     <ProjectReference Include="..\ConsumingData\ConsumingData.csproj">
       <Project>{95A55ECB-7075-4118-9BDE-FFB4210F2226}</Project>
       <Name>ConsumingData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Linq\Linq.csproj">
+      <Project>{0A1DA571-3217-4145-ADFF-1176AD3F2C37}</Project>
+      <Name>Linq</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
