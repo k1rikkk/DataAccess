@@ -8,6 +8,6 @@ namespace Collections
 {
     public class WorkerComparer : IComparer<Worker>
     {
-        public int Compare(Worker x, Worker y) => string.Compare(x.WorkingPosition, y.WorkingPosition);
+        public int Compare(Worker x, Worker y) => x.WorkingPosition - y.WorkingPosition;
     }
 }

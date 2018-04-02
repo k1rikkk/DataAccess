@@ -10,8 +10,13 @@ namespace Collections
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string WorkingPosition { get; set; }
+        public WorkingPosition WorkingPosition { get; set; }
 
         public bool Equals(Worker other) => FirstName == other.FirstName && LastName == other.LastName;
+    }
+
+    public enum WorkingPosition
+    {
+        Director, President, GeneralManager, AssistantManager
     }
 }

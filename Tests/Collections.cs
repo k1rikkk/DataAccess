@@ -16,30 +16,30 @@ namespace Tests
             {
                 new Worker
                 {
-                    FirstName = "Worker F",
-                    WorkingPosition = "F"
+                    FirstName = "Worker A",
+                    WorkingPosition = WorkingPosition.President
                 },
                 new Worker
                 {
-                    FirstName = "Worker H",
-                    WorkingPosition = "H"
+                    FirstName = "Worker B",
+                    WorkingPosition = WorkingPosition.GeneralManager
                 }
             };
             crew.Add(new Worker
             {
                 FirstName = "Worker C",
-                WorkingPosition = "C"
+                WorkingPosition = WorkingPosition.Director
             });
             Assert.AreEqual(true, crew.Contains(new Worker { FirstName = "Worker C" }));
             crew.RemoveAt(1);
-            Assert.AreEqual(false, crew.Contains(new Worker { FirstName = "Worker H" }));
+            Assert.AreEqual(false, crew.Contains(new Worker { FirstName = "Worker B" }));
             crew.Insert(0, new Worker
             {
-                FirstName = "Worker A",
-                WorkingPosition = "A"
+                FirstName = "Worker D",
+                WorkingPosition = WorkingPosition.AssistantManager
             });
             Assert.AreEqual(3, crew.Count);
-            Assert.AreEqual("A", crew[0].WorkingPosition);
+            Assert.AreEqual(WorkingPosition.AssistantManager, crew[0].WorkingPosition);
         }
 
         [TestMethod]
@@ -47,18 +47,18 @@ namespace Tests
         {
             Worker f = new Worker
             {
-                FirstName = "Worker F",
-                WorkingPosition = "F"
+                FirstName = "Worker A",
+                WorkingPosition = WorkingPosition.President
             };
             Worker h = new Worker
             {
-                FirstName = "Worker H",
-                WorkingPosition = "H"
+                FirstName = "Worker B",
+                WorkingPosition = WorkingPosition.GeneralManager
             };
             Worker c = new Worker
             {
                 FirstName = "Worker C",
-                WorkingPosition = "C"
+                WorkingPosition = WorkingPosition.Director
             };
             Crew crew = new Crew { f, h, c };
             crew.SortByWorkingPosition();
