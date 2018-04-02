@@ -54,11 +54,16 @@
     <Compile Include="ConsumingData.cs" />
     <Compile Include="Linq.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Collections.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Collections\Collections.csproj">
+      <Project>{EEBE1534-0CAC-4A19-A402-4CB088CC46AE}</Project>
+      <Name>Collections</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConsumingData\ConsumingData.csproj">
       <Project>{95A55ECB-7075-4118-9BDE-FFB4210F2226}</Project>
       <Name>ConsumingData</Name>
